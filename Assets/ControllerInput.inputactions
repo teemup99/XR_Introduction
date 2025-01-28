@@ -1,0 +1,85 @@
+{
+    "name": "ControllerInput",
+    "maps": [
+        {
+            "name": "ControllerActions",
+            "id": "540e6ddd-33ec-4d32-95ec-1e456a546fc1",
+            "actions": [
+                {
+                    "name": "QuitButton",
+                    "type": "Button",
+                    "id": "657f7afc-eb3b-4c00-82bd-10a7493c8483",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LightButton",
+                    "type": "Button",
+                    "id": "d248e798-803e-4997-a6ef-559e6bd8c15d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TeleportButton",
+                    "type": "Button",
+                    "id": "96e87b37-0ade-4366-b16f-67986ebdd7c4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "adeb2c2a-04f9-4130-a8b2-42e0980eba7c",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "QuitButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e566a774-6c44-4140-ae3e-4fc9615e90a0",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "QuitButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d7efd82b-9034-4561-937e-be4ba740d7cc",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LightButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "34da8a6b-ac21-4a65-8446-9c9455f28618",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TeleportButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
