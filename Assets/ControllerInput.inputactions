@@ -31,6 +31,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "GrabLeft",
+                    "type": "Button",
+                    "id": "ffc43075-cf29-408f-b375-7c68e4ed9d91",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GrabRight",
+                    "type": "Button",
+                    "id": "994a294b-e518-4f6f-8edd-e363753a1fac",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -38,17 +56,6 @@
                     "name": "",
                     "id": "adeb2c2a-04f9-4130-a8b2-42e0980eba7c",
                     "path": "<XRController>{LeftHand}/{SecondaryButton}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "QuitButton",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e566a774-6c44-4140-ae3e-4fc9615e90a0",
-                    "path": "",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -75,6 +82,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "TeleportButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e17c5186-c503-4ec8-bbdb-b628040adb30",
+                    "path": "<XRController>{LeftHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GrabLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b824cedf-2cd4-4f33-bb6d-cdd989c46201",
+                    "path": "<XRController>{RightHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GrabRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
