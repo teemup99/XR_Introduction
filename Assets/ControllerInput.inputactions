@@ -15,7 +15,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "LightButton",
+                    "name": "LeftPrimary",
                     "type": "Button",
                     "id": "d248e798-803e-4997-a6ef-559e6bd8c15d",
                     "expectedControlType": "",
@@ -33,7 +33,16 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "GrabLeft",
+                    "name": "RightSecondary",
+                    "type": "Button",
+                    "id": "959ee921-5cfc-46c8-9b23-e280331a4679",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GripLeft",
                     "type": "Button",
                     "id": "ffc43075-cf29-408f-b375-7c68e4ed9d91",
                     "expectedControlType": "",
@@ -42,9 +51,45 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "GrabRight",
+                    "name": "GripRight",
                     "type": "Button",
                     "id": "994a294b-e518-4f6f-8edd-e363753a1fac",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TriggerLeft",
+                    "type": "Button",
+                    "id": "3cf2f693-3934-42b6-b008-11f37e381a3f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TriggerRight",
+                    "type": "Button",
+                    "id": "12cac9a1-c74d-47ff-81a3-6ac71bf721df",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ThumbHoverLeft",
+                    "type": "Button",
+                    "id": "d1c4b895-7c22-4edc-a4fb-1651b5ff8e9b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ThumbHoverRight",
+                    "type": "Button",
+                    "id": "94ac0fa4-16c7-4cde-ad31-6ad68114fc4b",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -70,7 +115,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "LightButton",
+                    "action": "LeftPrimary",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -88,22 +133,77 @@
                 {
                     "name": "",
                     "id": "e17c5186-c503-4ec8-bbdb-b628040adb30",
-                    "path": "<XRController>{LeftHand}/{TriggerButton}",
+                    "path": "<XRController>{LeftHand}/{GripButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "GrabLeft",
+                    "action": "GripLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "b824cedf-2cd4-4f33-bb6d-cdd989c46201",
+                    "path": "<XRController>{RightHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GripRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "40593eaa-5244-46ea-a392-434015c8c4a3",
+                    "path": "<XRController>{LeftHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TriggerLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d0328240-6fb6-4636-8022-22aa93c683a5",
                     "path": "<XRController>{RightHand}/{TriggerButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "GrabRight",
+                    "action": "TriggerRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4c231184-04f1-43b7-b15a-a05945aae985",
+                    "path": "<XRController>{LeftHand}/thumbstickTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ThumbHoverLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2bf91d05-4cbf-424a-9511-5c20f4ca1fe8",
+                    "path": "<XRController>{RightHand}/thumbstickTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ThumbHoverRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7791120b-177c-4690-8064-54a54ea5d1a8",
+                    "path": "<XRController>{RightHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightSecondary",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

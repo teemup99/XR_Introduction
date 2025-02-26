@@ -17,6 +17,11 @@ public class CustomGrab : MonoBehaviour
     private Vector3 currentPosition;
     private Quaternion currentRotation;
 
+    // Object snapping
+    public List<Transform> snapPoints = new List<Transform>();
+    public float snapDistance = 0.2f;
+    public bool snapRotation = true;
+
     private void Start()
     {
         action.action.Enable();
@@ -36,7 +41,25 @@ public class CustomGrab : MonoBehaviour
         {
             // Grab nearby object or the object in the other hand
             if (!grabbedObject)
+            {
                 grabbedObject = nearObjects.Count > 0 ? nearObjects[0] : otherHand.grabbedObject;
+
+                if (grabbedObject)
+                {
+                    SnapToClosestPoint(grabbedObject);
+                    //Code for bouncy ball
+                    if (grabbedObject.name == "SuperBall")
+                    {
+                        Rigidbody rb = grabbedObject.GetComponent<Rigidbody>();
+                        if (rb && !rb.isKinematic)
+                        {
+                            rb.isKinematic = true;
+                            rb.useGravity = false;
+                            rb.interpolation = RigidbodyInterpolation.None;
+                        }
+                    }
+                }
+            }
 
             if (grabbedObject)
             {
@@ -52,7 +75,19 @@ public class CustomGrab : MonoBehaviour
         }
         // If let go of button, release object
         else if (grabbedObject)
+        {
+            // Throwing script
+            Rigidbody rb = grabbedObject.GetComponent<Rigidbody>();
+            if (rb && rb.isKinematic && grabbedObject.name == "SuperBall")
+            {
+                rb.isKinematic = false;
+                rb.velocity = (transform.position - currentPosition) / Time.deltaTime;
+                rb.angularVelocity = (transform.rotation.eulerAngles - currentRotation.eulerAngles) / Time.deltaTime;
+                rb.useGravity = true;
+                rb.interpolation = RigidbodyInterpolation.Interpolate;
+            }
             grabbedObject = null;
+        }
 
         // Should save the current position and rotation here
         currentPosition = transform.position;
@@ -77,5 +112,31 @@ public class CustomGrab : MonoBehaviour
         Transform t = other.transform;
         if (t && t.tag.ToLower() == "grabbable")
             nearObjects.Remove(t);
+    }
+
+    //Snapping script
+    private void SnapToClosestPoint(Transform obj)
+    {
+        Transform closestSnap = null;
+        float closestDistance = snapDistance;
+
+        foreach (Transform snap in snapPoints)
+        {
+            float distance = Vector3.Distance(obj.position, snap.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestSnap = snap;
+            }
+        }
+
+        if (closestSnap)
+        {
+            obj.position = closestSnap.position;
+            if (snapRotation)
+            {
+                obj.rotation = closestSnap.rotation;
+            }
+        }
     }
 }
